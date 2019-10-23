@@ -29,15 +29,21 @@ function logThis() {
 var voyager1 = {
   classification: 'Space Probe',
   title: 'Voyager 1',
-  logThis: logThis  // adding logThis function to voyager1
+  logThis() {
+    console.log(this);
+  }  // adding logThis function to voyager1
 }
 
 
 // What is the value of `this` when we call voyager1.logThis();?
-const result = 'REPLACE WITH YOUR RESULT HERE';
+const result =
+'voyager1.logThis
+ƒ logThis() {
+    console.log(this);
+  }';
 return result;
 
-// Annotation: 
+// Annotation:
 // Write your annotation here as a comment
 ```
 
@@ -60,10 +66,10 @@ var voyager1 = {
 const result = 'voyager1';
 return result;
 
-// Annotation: 
+// Annotation:
 // `this` will reference the voyager1 object because we are calling `logThis()` as a method
 // on that particular object. The voyager1 object has a property called `logThis` that references
-// a traditional ES5 global function. With traditional ES5 functions, the value of `this` is set 
+// a traditional ES5 global function. With traditional ES5 functions, the value of `this` is set
 // upon invocation rather than upon declaration. If this had been written as an arrow function,
 // `this` would instead point to the global window object.
 ```

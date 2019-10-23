@@ -20,7 +20,7 @@ describe("PROTOTYPES", () => {
     it("orangeKittyNames", () => {
       const e = kittyPrompts.orangeKittyNames();
       expect(e).to.deep.equal(["Tiger", "Snickers"])
-    }), it("sortByAge", () => {
+    }), it("x.", () => {
       const e = kittyPrompts.sortByAge();
       expect(e).to.deep.equal([{
         name: "Snickers",
@@ -171,7 +171,7 @@ describe("PROTOTYPES", () => {
         "crystallized ginger": 2
       })
     })
-  }), describe("Class Prompts", () => {
+  }), describe.only("Class Prompts", () => {
     it("feClassrooms", () => {
       const e = classPrompts.feClassrooms();
       expect(e).to.deep.equal([{
@@ -349,17 +349,17 @@ describe("PROTOTYPES", () => {
   }), describe("Astronomy Prompts", () => {
     it("starsInConstellations", () => {
       const e = astronomyPrompts.starsInConstellations();
-      expect(e).to.deep.equal([{ 
+      expect(e).to.deep.equal([{
         name: 'Rigel',
         visualMagnitude: 0.13,
         constellation: 'Orion',
         lightYearsFromEarth: 860,
-        color: 'blue' 
+        color: 'blue'
       }, { name: 'Betelgeuse',
         visualMagnitude: 0.5,
         constellation: 'Orion',
         lightYearsFromEarth: 640,
-        color: 'red' 
+        color: 'red'
       }])
     }), it("starsByColor", () => {
       const e = astronomyPrompts.starsByColor();
@@ -501,7 +501,7 @@ describe("PROTOTYPES", () => {
         name: 'Justin Duncan',
         nationality: 'Alien',
         imdbStarMeterRating: 0
-      }, 
+      },
       {
         name: 'Karin Ohman',
         nationality: 'Chinese',
