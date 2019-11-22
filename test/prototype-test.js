@@ -103,7 +103,7 @@ describe("PROTOTYPES", () => {
         studentsPerInstructor: 8
       }])
     })
-  }), describe("Cake Prompts", () => {
+  }), describe.only("Cake Prompts", () => {
     it("stockPerCake", () => {
       const e = cakePrompts.stockPerCake();
       expect(e).to.deep.equal([{
@@ -171,7 +171,7 @@ describe("PROTOTYPES", () => {
         "crystallized ginger": 2
       })
     })
-  }), describe.only("Class Prompts", () => {
+  }), describe("Class Prompts", () => {
     it("feClassrooms", () => {
       const e = classPrompts.feClassrooms();
       expect(e).to.deep.equal([{
@@ -197,7 +197,7 @@ describe("PROTOTYPES", () => {
         feCapacity: 110,
         beCapacity: 96
       })
-    }), it("sortByCapacity", () => {
+    }), it.skip("sortByCapacity", () => {
       const e = classPrompts.sortByCapacity();
       expect(e).to.deep.equal([{
         roomLetter: "H",

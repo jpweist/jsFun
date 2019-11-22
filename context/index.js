@@ -9,14 +9,14 @@ const context = {
         this.title = title;
         this.classification = classification;
         this.fly = fly;
-      } 
+      }
     }
 
     const ship = new SpaceProbe('voyager', 'classy');
 
 
     // What is the value of `this` when we call ship.fly()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'window object';
     return result;
 
     // Annotation:
@@ -28,7 +28,7 @@ const context = {
       const value = 2;
       return this.value;
     }
-    
+
     // What is the value of `this` when we call fn()?
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
@@ -52,7 +52,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -64,7 +64,7 @@ const context = {
         const innerFunction = function() {
           console.log(this.breed);
         };
-    
+
         return innerFunction;
       }
     };
@@ -75,7 +75,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -91,7 +91,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -114,7 +114,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -142,7 +142,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -150,7 +150,7 @@ const context = {
     const obj = {
       arrowFunction: null,
       method: function() {
-        this.arrowFunction = () => { 
+        this.arrowFunction = () => {
           return this;
         };
       }
@@ -162,11 +162,11 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
-  exerciseI() {  
+  exerciseI() {
     const poets = [{
       name: 'Sappho'
     }, {
@@ -185,7 +185,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment. Annotation should include explanation regarding the second argument of `poets` that is being passed
   },
 
@@ -199,7 +199,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment.
   },
 
@@ -215,7 +215,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment.
   },
 
@@ -227,7 +227,7 @@ const context = {
 
         setTimeout(function() {
           console.log('Your dog is a ' + _this.breed);
-        }) 
+        })
       }
     };
 
@@ -235,7 +235,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -258,7 +258,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -277,14 +277,14 @@ const context = {
         console.log('caw, caw');
       }
     }
-    
+
     var firstBird = new Bird('Calvin', 'budgie');
 
     // What is the value of `this` when we call firstBird.delayNoise();
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -300,7 +300,7 @@ const context = {
     const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
 
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   },
 
@@ -316,7 +316,7 @@ const context = {
     return result;
 
     // What is the value of `this` when we call child.scream();
-    // Annotation: 
+    // Annotation:
     // Write your annotation here as a comment
   }
 };

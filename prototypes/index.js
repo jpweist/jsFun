@@ -20,29 +20,25 @@ const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
 
 // DATASET: kitties from ./datasets/kitties
 const kittyPrompts = {
-  orangeKittyNames(kitties) {
+  orangeKittyNames() {
 // function(total, currentValue, index, arr)
     // Return an array of just the names of kitties who are orange e.g.
     // ['Tiger', 'Snickers']
-    const result = kitties.reduce( (acc, val) => {
-      if (kittens[val.color] === 'orange') {
-        return acc.push(kittens[val.color]);
-      }
-      return acc;
-    }, [] );
+    const result = kitties.filter(x => x.color === 'orange')
+    .map(x => x.name);
+
 
     return result;
 
-    // Annotation:
-    // Write your annotation here as a comment
+    // Annotation: used filter to get the orange cats then map to get those cats name
+    // Write your annotation here as a comment filter an array to another array
+    // use map to go thru and assign
   },
 
   sortByAge() {
     // Sort the kitties by their age
 
-    const result = kittens.map( (a, b) => {
-      b.age - a.age;
-    })
+    const result = kitties.sort( (a, b) => b.age - a.age)
     ;
     return result;
 
@@ -63,8 +59,10 @@ const kittyPrompts = {
     //   color: 'orange'
     // },
     // ...etc]
+    const result = kitties.map( x => {
+      x.age = x.age + 2
+      return x;});
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
     return result;
   }
 };
@@ -96,7 +94,16 @@ const clubPrompts = {
     //   ...etc
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = clubs.reduce( (acc, club) => {
+      club.members.forEach( (person) => {
+        if (!acc[person]) {
+          acc[person] = [];
+        }
+        return acc[person].push(club.club)
+      })
+      return acc;
+    }, {});
+
     return result;
 
     // Annotation:
@@ -167,11 +174,18 @@ const cakePrompts = {
     //    ..etc
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.map(element => {
+      let darkCakes = {
+        flavor: element.cakeFlavor,
+        inStock: element.inStock
+      }
+      return darkCakes;
+    })
+    ;
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Write your annotation here as a comment: we need an array of the same length so we can use map. then in the variable can the info and then we return the variable.
   },
 
   onlyInStock() {
@@ -195,7 +209,7 @@ const cakePrompts = {
     // ..etc
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.filter( (element) => element.inStock > 0);
     return result;
 
     // Annotation:
@@ -206,7 +220,11 @@ const cakePrompts = {
     // Return the total amount of cakes in stock e.g.
     // 59
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.reduce( (acc, val) =>{
+        acc += val.inStock;
+        return acc;
+    }, 0)
+    ;
     return result;
 
     // Annotation:
@@ -218,7 +236,14 @@ const cakePrompts = {
     // every cake in the dataset e.g.
     // ['dutch process cocoa', 'toasted sugar', 'smoked sea salt', 'berries', ..etc]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const toppings = cakes.reduce( (acc, val) => {
+      return acc.concat(val.toppings);
+
+    }, [])
+    const result = toppings.filter( (element, index) => {
+      console.log(index)
+      return toppings.indexOf(element) === index;
+    });
     return result;
 
     // Annotation:
@@ -236,7 +261,16 @@ const cakePrompts = {
     //    ...etc
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.reduce( (acc, cake) => {
+        cake.toppings.forEach( topping => {
+          if (!acc[topping]) {
+            acc[topping] = 0;
+          }
+          acc[topping]++;
+        })
+        return acc;
+    }, {})
+    ;
     return result;
 
     // Annotation:

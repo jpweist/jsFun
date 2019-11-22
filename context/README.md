@@ -23,7 +23,7 @@ For example, given the following exercise:
 
 ```js
 function logThis() {
-  console.log(this);
+  console.log(this); //window object
 }
 
 var voyager1 = {
